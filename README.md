@@ -50,6 +50,12 @@ python proc_dataset_gen_point_pairs_color.py --input_dir /path/to/flyingthings3d
 
 The processed data is also provided <a href="https://drive.google.com/file/d/1CMaxdt-Tg1Wct8v8eGNwuT7qRSIyJPY-/view?usp=sharing">here</a> for download (total size ~11GB).
 
+#### Pretrained model on FlyingThing3D & Fine-tune the model on the KITTI dataset
+
+```
+log_train_best/model_latest.ckpt.meta   &    log_train_best/model_epe3d_929.ckpt.meta
+```
+
 #### Training
 
 Pre-training the model on FlyingThing3D, the adjustable parameters include the data set path (--data), the loaded log (--log_dir), the number of points sampled from the point cloud (--num_point) and the training epoch (--max_epoch), etc. The command is as follows: 
