@@ -84,7 +84,7 @@ python train_gd_kitti.py --gpu 0 --weight_loss 100 --log_dir train_noshared --we
 
 ### Related Projects
 
-* <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Liu_FlowNet3D_Learning_Scene_Flow_in_3D_Point_Clouds_CVPR_2019_paper.html" target="_blank">FlowNet3D Learning Scene Flow in 3D Point Clouds</a> by Liu et al. (CVPR 2019). Code and data released in <a href="[xingyul/flownet3d: FlowNet3D: Learning Scene Flow in 3D Point Clouds (CVPR 2019) (github.com)](https://github.com/xingyul/flownet3d)">GitHub</a>.
+* <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Liu_FlowNet3D_Learning_Scene_Flow_in_3D_Point_Clouds_CVPR_2019_paper.html" target="_blank">FlowNet3D Learning Scene Flow in 3D Point Clouds</a> by Liu et al. (CVPR 2019). Code and data released in <a href="[https://github.com/xingyul/flownet3d">GitHub</a>.
 * <a href="http://stanford.edu/~rqi/pointnet" target="_blank">PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</a> by Qi et al. (CVPR 2017 Oral Presentation). Code and data released in <a href="https://github.com/charlesq34/pointnet">GitHub</a>.
 * <a href="http://stanford.edu/~rqi/pointnet2" target="_blank">PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space</a> by Qi et al. (NIPS 2017). Code and data released in <a href="https://github.com/charlesq34/pointnet2">GitHub</a>.
 
