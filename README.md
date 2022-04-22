@@ -79,7 +79,7 @@ A pre-trained model is provided <a href="https://drive.google.com/open?id=1Ko25s
 Set --max_epoch to 1 to perform model evaluation on KITTI. The last 50 frames are used to evaluate the model 
 
 ```
-python train_gd_kitti.py --gpu 0 --weight_loss 100 --log_dir train_noshared --weight_g 2 --learning_rate_g 0.0001 --model model_concat_upsa2 --data_kitti ../../dataset/kitti_self_supervised_flow --num_point 2048 --max_epoch 1 --batch_size 1 --pre_trained_dir log_train_best/model_latest.ckpt > 
+python train_gd_kitti.py --gpu 0 --weight_loss 100 --log_dir train_noshared --weight_g 2 --learning_rate_g 0.0001 --model model_concat_upsa_gd --data_kitti ../../dataset/kitti_self_supervised_flow --num_point 2048 --max_epoch 1 --batch_size 1 --pre_trained_dir log_train_best/model_latest.ckpt > 
 ```
 
 ### Related Projects
