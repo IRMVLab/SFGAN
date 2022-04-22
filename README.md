@@ -61,13 +61,13 @@ log_train_best/model_latest.ckpt.meta   &    log_train_best/model_epe3d_929.ckpt
 Pre-training the model on FlyingThing3D, the adjustable parameters include the data set path (--data), the loaded log (--log_dir), the number of points sampled from the point cloud (--num_point) and the training epoch (--max_epoch), etc. The command is as follows: 
 
 ```
-nohup python train_gd.py --gpu 0 --model model_concat_upsa2 --data ../FlyingThings3D_subset_processed_35m --log_dir log_train_fly --num_point 2048 --max_epoch 1000 --batch_size 4 --pre_trained_dir log_train_best/model_latest.ckpt --gd_frequency 1 --weight_loss 1 > fly_logtrain.txt 2>&1 &
+nohup python train_gd.py --gpu 0 --model model_concat_upsa_gd --data ../FlyingThings3D_subset_processed_35m --log_dir log_train_fly --num_point 2048 --max_epoch 1000 --batch_size 4 --pre_trained_dir log_train_best/model_latest.ckpt --gd_frequency 1 --weight_loss 1 > fly_logtrain.txt 2>&1 &
 ```
 
 Fine-tune the model on KITTI. We release the processed KITTI scene flow dataset <a href="https://drive.google.com/open?id=1XBsF35wKY0rmaL7x7grD_evvKCAccbKi">here</a> for download (total size ~266MB). The KITTI scene flow dataset was processed by converting the 2D optical flow into 3D scene flow and removing the ground points. We processed the first 150 data points from KITTI scene flow dataset. Each of the data points are stored as a `.npz` file and its dictionary has three keys: `pos1`, `pos2` and `gt`, representing the first frame of point cloud, second frame of point cloud and the ground truth scene flow vectors for the points in the first frame. The first 100 frames are used to fine-tune the model.
 
 ```
-nohup python train_gd_kitti.py --gpu 0 --weight_loss 100 --log_dir train_noshared --weight_g 2 --learning_rate_g 0.0001 --model model_concat_upsa2 --data_kitti ../../dataset/kitti_self_supervised_flow --num_point 2048 --max_epoch 1000 --batch_size 4 --pre_trained_dir log_train_best/model_latest.ckpt > noshared1.txt 2>&1 &
+nohup python train_gd_kitti.py --gpu 0 --weight_loss 100 --log_dir train_noshared --weight_g 2 --learning_rate_g 0.0001 --model model_concat_upsa_gd --data_kitti ../../dataset/kitti_self_supervised_flow --num_point 2048 --max_epoch 1000 --batch_size 4 --pre_trained_dir log_train_best/model_latest.ckpt > noshared1.txt 2>&1 &
 ```
 
 A pre-trained model is provided <a href="https://drive.google.com/open?id=1Ko25szFFKHOq-SPryKbi9ljpOkoe69aO">here</a> for download.
